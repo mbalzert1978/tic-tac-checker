@@ -18,14 +18,19 @@ def is_solved(board: list[list[int]]) -> int:
     -1 when unsolved.
     ```
     """
-    return solve_game_from(set(fetch_diagonals(board) + fetch_row_col(board)))
+    return solve_game_from(
+        set(fetch_diagonals(board) + fetch_row(board) + fetch_col(board)),
+    )
 
 
-def fetch_row_col(board) -> list[int]:
-    """Fetch the result of rows and columns of a tic tac toe board."""
-    rows = [board[i][0] * board[i][1] * board[i][2] for i in range(3)]
-    cols = [board[0][i] * board[1][i] * board[2][i] for i in range(3)]
-    return rows + cols
+def fetch_row(board) -> list[int]:
+    """Fetch the result of rows of a tic tac toe board."""
+    return [board[i][0] * board[i][1] * board[i][2] for i in range(3)]
+
+
+def fetch_col(board) -> list[int]:
+    """Fetch the result of columns of a tic tac toe board."""
+    return [board[0][i] * board[1][i] * board[2][i] for i in range(3)]
 
 
 def fetch_diagonals(board) -> list[int]:
