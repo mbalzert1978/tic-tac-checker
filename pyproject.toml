@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "monad"
+name = "tic-tac-checker"
 version = "0.1.0"
 description = ""
 authors = ["Markus Iorio <mbalzert@gmail.com>"]
