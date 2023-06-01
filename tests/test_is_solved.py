@@ -6,7 +6,12 @@ def test_not_finished():
     assert is_solved(board) == -1
 
 
-def test_winning_row():
+def test_winning_row_P1():
+    board = [[2, 1, 1], [1, 1, 1], [0, 2, 2]]
+    assert is_solved(board) == 1
+
+
+def test_winning_row_P2():
     board = [[2, 1, 1], [0, 1, 1], [2, 2, 2]]
     assert is_solved(board) == 2
 
