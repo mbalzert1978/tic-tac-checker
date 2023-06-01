@@ -7,7 +7,7 @@ def is_solved(board: list[list[int]]) -> int:
 
     Args:
     ----
-    board: a 2d list of integers
+    board: a 2d list of integers 3 x 3 grid.
 
     Returns:
     -------
